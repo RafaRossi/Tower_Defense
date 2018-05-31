@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour {
     public Slider slider;
 
     float lifes;
+    bool isDead = false;
 
 	// Use this for initialization
 	void Start () {
@@ -28,12 +29,13 @@ public class Enemy : MonoBehaviour {
     {
         lifes -= damage;
         slider.value = lifes;
-        if (lifes <= 0)
+        if (lifes <= 0 && !isDead)
             Die();
     }
 
     void Die()
     {
+        isDead = true;
         Destroy(gameObject);
         SpawnController.enemysAlives--;
         PlayerStats.Money += value;

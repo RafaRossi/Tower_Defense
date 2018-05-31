@@ -904,18 +904,18 @@ Prefab:
       objectReference: {fileID: 1893282045}
     - target: {fileID: 114691656657081536, guid: 0fe315b560b872a40abbc11194eddaee,
         type: 2}
+      propertyPath: levelToUnlock
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114691656657081536, guid: 0fe315b560b872a40abbc11194eddaee,
+        type: 2}
       propertyPath: winUI
       value: 
       objectReference: {fileID: 446372490}
     - target: {fileID: 114691656657081536, guid: 0fe315b560b872a40abbc11194eddaee,
         type: 2}
-      propertyPath: levelToUnlock
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691656657081536, guid: 0fe315b560b872a40abbc11194eddaee,
-        type: 2}
       propertyPath: maximum
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fe315b560b872a40abbc11194eddaee, type: 2}

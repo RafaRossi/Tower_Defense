@@ -13,7 +13,7 @@ public class SpawnController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
+        enemysAlives = 0;
 	}
 	
 	// Update is called once per frame
@@ -21,7 +21,13 @@ public class SpawnController : MonoBehaviour {
         if (enemysAlives > 0)
             return;
 
-     if(countdown <= 0)
+        if (waveIndex == waves.Length)
+        {
+            GameManager.instance.WinLevel();
+            enabled = false;
+        }
+
+        if(countdown <= 0)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
@@ -34,22 +40,17 @@ public class SpawnController : MonoBehaviour {
     {
         Wave wave = waves[waveIndex];
         PlayerStats.Round++;
+        enemysAlives = wave.count;
         for (int i = 0; i < wave.count; i++)
         {
             SpawnEnemy(wave.enemy);
             yield return new WaitForSeconds(1/wave.rate);
         }
         waveIndex++;
-
-        if (waveIndex == waves.Length)
-        {
-            enabled = false;
-        }
     }
 
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoints.position, spawnPoints.rotation, spawnPoints);
-        enemysAlives++;
     }
 }

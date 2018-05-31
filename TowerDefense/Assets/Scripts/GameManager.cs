@@ -9,22 +9,31 @@ public class GameManager : MonoBehaviour {
 
     public Text moneyText;
     public Slider slider;
-    public GameObject gameOverUI, pauseUI;
+    public GameObject gameOverUI, pauseUI, winUI;
+    public Fade fade;
+
+    public int levelToUnlock;
 
     public bool isGameOver = false;
+
+    public int maximum, current;
+
+    Dictionary<string, int> level = new Dictionary<string, int>();
+
+    int stars, lifes;
 
     private void Awake()
     {
         instance = this;
     }
 
-    // Use this for initialization
-    void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    private void Start()
+    {
+        lifes = PlayerStats.Lifes;
+    }
+
+    // Update is called once per frame
+    void Update () {
         moneyText.text = "$ " + PlayerStats.Money;
         slider.value = PlayerStats.Lifes;
 
@@ -61,13 +70,41 @@ public class GameManager : MonoBehaviour {
 
     public void Retry()
     {
-        Toggle();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+        fade.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
+        fade.FadeTo("Menu");
+    }
+
+    public void WinLevel()
+    {
+        winUI.SetActive(true);
+        isGameOver = true;
+
+        stars++;
+
+        if (PlayerStats.Lifes == lifes)
+            stars++;
+
+        if (current <= maximum)
+            stars++;
+
+        if (levelToUnlock > GameController.instance.currentLevel)
+            GameController.instance.currentLevel = levelToUnlock;
+
+        level.Add(SceneManager.GetActiveScene().name, stars);
+        GameController.instance.GetDicitonary(level, SceneManager.GetActiveScene().name);
+
+        GameController.instance.Save();
+    }
+
+    public void Continue()
+    {
+        fade.FadeTo("LevelSelect");
     }
 
 }

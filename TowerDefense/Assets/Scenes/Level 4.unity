@@ -459,11 +459,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8793d746273f7884c9f6324a53a99c5e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &446372490 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1931423908106426, guid: 8793d746273f7884c9f6324a53a99c5e,
-    type: 2}
-  m_PrefabInternal: {fileID: 446372489}
 --- !u!1001 &526528291
 Prefab:
   m_ObjectHideFlags: 0
@@ -902,21 +897,6 @@ Prefab:
       propertyPath: fade
       value: 
       objectReference: {fileID: 1893282045}
-    - target: {fileID: 114691656657081536, guid: 0fe315b560b872a40abbc11194eddaee,
-        type: 2}
-      propertyPath: winUI
-      value: 
-      objectReference: {fileID: 446372490}
-    - target: {fileID: 114691656657081536, guid: 0fe315b560b872a40abbc11194eddaee,
-        type: 2}
-      propertyPath: levelToUnlock
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691656657081536, guid: 0fe315b560b872a40abbc11194eddaee,
-        type: 2}
-      propertyPath: maximum
-      value: 400
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fe315b560b872a40abbc11194eddaee, type: 2}
   m_IsPrefabParent: 0

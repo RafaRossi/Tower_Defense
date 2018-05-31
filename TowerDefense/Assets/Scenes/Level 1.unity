@@ -456,6 +456,23 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1907410784799714, guid: 8793d746273f7884c9f6324a53a99c5e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829139737140642, guid: 8793d746273f7884c9f6324a53a99c5e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114513511279930766, guid: 8793d746273f7884c9f6324a53a99c5e,
+        type: 2}
+      propertyPath: m_Text
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642567195777978, guid: 8793d746273f7884c9f6324a53a99c5e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8793d746273f7884c9f6324a53a99c5e, type: 2}
   m_IsPrefabParent: 0
@@ -761,7 +778,7 @@ Prefab:
     - target: {fileID: 114293848767629096, guid: 0fe315b560b872a40abbc11194eddaee,
         type: 2}
       propertyPath: waves.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4032632956409906, guid: 0fe315b560b872a40abbc11194eddaee, type: 2}
       propertyPath: m_LocalPosition.x
@@ -910,13 +927,31 @@ Prefab:
     - target: {fileID: 114691656657081536, guid: 0fe315b560b872a40abbc11194eddaee,
         type: 2}
       propertyPath: levelToUnlock
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114691656657081536, guid: 0fe315b560b872a40abbc11194eddaee,
         type: 2}
       propertyPath: maximum
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 114293848767629096, guid: 0fe315b560b872a40abbc11194eddaee,
+        type: 2}
+      propertyPath: waves.Array.data[1].enemy
+      value: 
+      objectReference: {fileID: 1824911249995610, guid: 2d2847753bd19e2458bbf7a074b9a8de,
+        type: 2}
+    - target: {fileID: 114293848767629096, guid: 0fe315b560b872a40abbc11194eddaee,
+        type: 2}
+      propertyPath: waves.Array.data[2].enemy
+      value: 
+      objectReference: {fileID: 1824911249995610, guid: 2d2847753bd19e2458bbf7a074b9a8de,
+        type: 2}
+    - target: {fileID: 114293848767629096, guid: 0fe315b560b872a40abbc11194eddaee,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemy
+      value: 
+      objectReference: {fileID: 1824911249995610, guid: 2d2847753bd19e2458bbf7a074b9a8de,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fe315b560b872a40abbc11194eddaee, type: 2}
   m_IsPrefabParent: 0

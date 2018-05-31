@@ -1,17 +1,42 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuButtons : MonoBehaviour {
 
-	public void ContinueGame()
-    {
+    public Fade fade;
+    public Button continueButton;
+    public GameObject newGamePanel;
 
+    bool isLoaded;
+
+    private void Start()
+    {
+        isLoaded = GameController.instance.Load();
+
+        if (!isLoaded)
+            continueButton.interactable = false;
+    }
+
+    public void ContinueGame()
+    {
+        fade.FadeTo("LevelSelect");
+    }
+
+    public void ConfirmGame()
+    {
+        if (isLoaded)
+        {
+            newGamePanel.SetActive(true);
+        }
+        else
+            NewGame();
     }
 
     public void NewGame()
     {
-        //Pedir Confirmação se nao existir nenhum jogo salvo
-        SceneManager.LoadScene(1);
+        GameController.instance.currentLevel = 1;
+        GameController.instance.Save();
+        ContinueGame();
     }
 
     public void QuitGame()

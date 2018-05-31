@@ -66,6 +66,7 @@ public class Node : MonoBehaviour {
             return;
 
         PlayerStats.Money -= turret.price;
+        GameManager.instance.current += turret.price;
         cost += turret.price;
 
         GameObject t = Instantiate(turret.turret, transform.position, Quaternion.identity);
@@ -83,6 +84,7 @@ public class Node : MonoBehaviour {
             return;
 
         PlayerStats.Money -= blueprint.upgradecost[i];
+        GameManager.instance.current += blueprint.upgradecost[i];
         cost += blueprint.upgradecost[i];
 
         Destroy(turret);
