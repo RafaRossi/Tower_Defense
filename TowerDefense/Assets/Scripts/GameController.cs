@@ -8,6 +8,7 @@ using System.IO;
 public class GameController : MonoBehaviour {
 
     public static GameController instance;
+
     public int currentLevel;
     public int stars;
 

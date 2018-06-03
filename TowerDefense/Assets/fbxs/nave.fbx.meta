@@ -4,11 +4,41 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: base
+    100004: circulo menor
+    100006: circulos superiores
+    100008: esfera inferior
+    100010: esfera superior
+    100012: pes
     400000: //RootNode
+    400002: base
+    400004: circulo menor
+    400006: circulos superiores
+    400008: esfera inferior
+    400010: esfera superior
+    400012: pes
     2100000: No Name
     2300000: //RootNode
+    2300002: base
+    2300004: circulo menor
+    2300006: circulos superiores
+    2300008: esfera inferior
+    2300010: esfera superior
+    2300012: pes
     3300000: //RootNode
+    3300002: base
+    3300004: circulo menor
+    3300006: circulos superiores
+    3300008: esfera inferior
+    3300010: esfera superior
+    3300012: pes
     4300000: cabine
+    4300002: esfera superior
+    4300004: circulo menor
+    4300006: base
+    4300008: esfera inferior
+    4300010: circulos superiores
+    4300012: pes
   externalObjects: {}
   materials:
     importMaterials: 1
